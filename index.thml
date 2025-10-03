@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Alimentación - INFIT</title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Fuente Inter para un estilo moderno y legible */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d0d;
+            color: #f5f5f5;
+        }
+        /* Definición del color de acento de INFIT */
+        .text-infit-orange {
+            color: #e59902; /* Color naranja vibrante */
+        }
+        .bg-infit-orange {
+            background-color: #e59902;
+        }
+        /* Estilo para los botones en estado inactivo */
+        .tab-button-inactive {
+            background-color: transparent;
+            color: #e59902;
+            border: 2px solid #e59902;
+        }
+        /* Estilo para los botones en estado activo */
+        .tab-button-active {
+            background-color: #e59902;
+            color: #ffffff;
+            box-shadow: 0 4px 10px rgba(229, 153, 2, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-[#1a1a1a] min-h-screen p-4 sm:p-8 flex flex-col items-center text-white">
+
+    <!-- Header -->
+    <header class="w-full max-w-4xl text-center mb-8">
+        <div class="mb-4">
+            <!-- LOGO INFIT: RUTA RELATIVA PARA GITHUB -->
+            <img src="./logo-infit.jpg" alt="Logotipo INFIT" class="w-24 h-24 mx-auto rounded-full object-cover bg-black p-1">
+            <h1 class="text-4xl font-extrabold text-white mb-2">Plan de Alimentación</h1>
+        </div>
+        <p class="text-xl text-infit-orange font-semibold mb-4">¡Tu Mejor Versión!</p>
+        <p class="text-md text-gray-300">Este plan te guiará para alcanzar tus objetivos de bienestar y salud.</p>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="w-full max-w-4xl bg-[#222222] p-6 rounded-3xl shadow-2xl border border-gray-700">
+
+        <!-- Info Section -->
+        <div class="w-full mb-8">
+            <h2 class="text-3xl font-bold text-white mb-4 border-b border-gray-700 pb-2">
+                <span class="text-infit-orange">🏋️‍♀️</span> DATOS DE PROGRESO
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-infit-orange transition-all">
+                    <h3 class="text-xl font-bold text-infit-orange mb-3">Adriana</h3>
+                    <ul class="text-white space-y-1 text-sm">
+                        <li><strong class="font-semibold">Objetivo:</strong> Bajar (% de grasa) / Mejorar hábitos</li>
+                        <li><strong class="font-semibold">Peso actual:</strong> 76.9 kg</li>
+                        <li><strong class="font-semibold">Grasa corporal:</strong> 41.7 %</li>
+                        <li><strong class="font-semibold">Masa Muscular:</strong> 53.1 KG</li>
+                        <li><strong class="font-semibold">Fecha de inicio:</strong> 06/10/2025</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-infit-orange transition-all">
+                    <h3 class="text-xl font-bold text-infit-orange mb-3">Macronutrientes Diarios</h3>
+                    <ul class="text-white space-y-1 text-sm">
+                        <li><strong class="font-semibold">Meta Calorías:</strong> 1,700 kcal/día*</li>
+                        <li><strong class="font-semibold">Proteínas:</strong> 145 g</li>
+                        <li><strong class="font-semibold">Grasas:</strong> 55 g</li>
+                        <li><strong class="font-semibold">Carbohidratos:</strong> 180 g</li>
+                        <li class="mt-2 text-xs text-gray-400">*Ajuste para mantener o aumentar músculo.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabs for Options -->
+        <h2 class="text-3xl font-bold text-white mb-4 border-b border-gray-700 pb-2">
+            <span class="text-infit-orange">🍽️</span> MENÚ SEMANAL
+        </h2>
+        <div class="flex justify-center gap-4 mb-8">
+            <button id="tabA" class="tab-button-active px-6 py-3 rounded-full text-lg font-bold transition-all duration-300 transform hover:scale-105">
+                Variación 1
+            </button>
+            <button id="tabB" class="tab-button-inactive px-6 py-3 rounded-full text-lg font-bold transition-all duration-300 transform hover:scale-105">
+                Variación 2
+            </button>
+        </div>
+
+        <!-- Content for Option A: VARIACIÓN 1 (Lunes, Miércoles, Viernes y Domingo) -->
+        <div id="contentA" class="tab-content transition-opacity duration-500 ease-in-out opacity-100 block">
+            <p class="text-center text-sm text-gray-400 mb-6">(Lunes, Miércoles, Viernes y Domingo)</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Desayuno -->
+                <div class="bg-gray-800 p-6 rounded-xl border-l-4 border-infit-orange shadow-md">
+                    <h3 class="text-xl font-extrabold mb-3 text-infit-orange">Desayuno</h3>
+                    <ul class="list-disc list-inside text-white space-y-1 text-sm">
+                        <li>2 huevos + 3 claras revueltos con espinaca y jitomate</li>
+                        <li>2 tortillas de maíz</li>
+                        <li>½ aguacate pequeño</li>
+                        <li>1 naranja</li>
+                    </ul>
+                </div>
+                <!-- Snack Mañana -->
+                <div class="bg-gray-800 p-6 rounded-xl border-l-4 border-gray-500 shadow-md">
+                    <h3 class="text-xl font-extrabold mb-3 text-white">Snack (Media Mañana)</h3>
+                    <ul class="list-disc list-inside text-white space-y-1 text-sm">
+                        <li>Yogurt griego natural sin azúcar (150 g)</li>
+                        <li>15 almendras</li>
+                    </ul>
+                </div>
+                <!-- Comida -->
+                <div class="bg-gray-800 p-6 rounded-xl border-l-4 border-infit-orange shadow-md">
+                    <h3 class="text-xl font-extrabold mb-3 text-infit-orange">Comida</h3>
+                    <ul class="list-disc list-inside text-white space-y-1 text-sm">
+                        <li>150 g pechuga de pollo a la plancha</li>
+                        <li>1 taza de arroz integral cocido</li>
+                        <li>Ensalada fresca</li>
+                        <li>1 cda de aceite de oliva</li>
+                    </ul>
+                </div>
+                <!-- Snack Tarde (Pre-entreno) -->
+                <div class="bg-gray-800 p-6 rounded-xl border-l-4 border-gray-500 shadow-md">
+                    <h3 class="text-xl font-extrabold mb-3 text-white">Snack (Pre-entreno)</h3>
+                    <ul class="list-disc list-inside text-white space-y-1 text-sm">
+                        <li>1 manzana</li>
+                        <li>2 rebanadas de pan integral con 2 cdas de crema de cacahuate</li>
+                    </ul>
+                </div>
+                <!-- Cena (Post-entreno) -->
+                <div class="bg-gray-800 p-6 rounded-xl border-l-4 border-infit-orange shadow-md">
+                    <h3 class="text-xl font-extrabold mb-3 text-infit-orange">Cena (Post-entreno)</h3>
+                    <ul class="list-disc list-inside text-white space-y-1 text-sm">
+                        <li>180 g de pescado blanco al horno</li>
+                        <li>150 g camote asado</li>
+                        <li>Ensalada de nopales con jitomate, cebolla y limón</li>
+                    </ul>
+                </div>
+                <!-- Comida Trampa -->
+                <div class="bg-gray-800 p-6 rounded-xl border-l-4 border-gray-500 shadow-md flex items-center">
+                    <div>
+                        <h3 class="text-xl font-extrabold mb-3 text-white">Comida Trampa (Domingo)</h3>
+                        <p class="text-sm text-gray-300">Elige **una comida libre** (ej. tacos, pizza, hamburguesa) controlando porciones. ¡Disfruta!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content for Option B: VARIACIÓN 2 (Martes, Jueves, Sábado) -->
+        <div id="contentB" class="tab-content transition-opacity duration-500 ease-in-out opacity-0 hidden">
+            <p class="text-center text-sm text-gray-400 mb-6">(Martes, Jueves y Sábado)</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Desayuno -->
+                <div class="bg-gray-800 p-6 rounded-xl border-l-4 border-infit-orange shadow-md">
+                    <h3 class="text-xl font-extrabold mb-3 text-infit-orange">Desayuno</h3>
+                    <ul class="list-disc list-inside text-white space-y-1 text-sm">
+                        <li>2 huevos + 2 claras en omelette con champiñones y pimientos</li>
+                        <li>1 taza de avena con canela y plátano en rodajas</li>
+                    </ul>
+                </div>
+                <!-- Snack Mañana -->
+                <div class="bg-gray-800 p-6 rounded-xl border-l-4 border-gray-500 shadow-md">
+                    <h3 class="text-xl font-extrabold mb-3 text-white">Snack (Media Mañana)</h3>
+                    <ul class="list-disc list-inside text-white space-y-1 text-sm">
+                        <li>1 taza de pepino y zanahoria con limón y chile en polvo</li>
+                        <li>30 g nuez</li>
+                    </ul>
+                </div>
+                <!-- Comida -->
+                <div class="bg-gray-800 p-6 rounded-xl border-l-4 border-infit-orange shadow-md">
+                    <h3 class="text-xl font-extrabold mb-3 text-infit-orange">Comida</h3>
+                    <ul class="list-disc list-inside text-white space-y-1 text-sm">
+                        <li>160 g carne magra (res o cerdo) asada</li>
+                        <li>1 taza de pasta integral cocida</li>
+                        <li>Ensalada de hojas verdes con jitomate cherry</li>
+                    </ul>
+                </div>
+                <!-- Snack Tarde (Pre-entreno) -->
+                <div class="bg-gray-800 p-6 rounded-xl border-l-4 border-gray-500 shadow-md">
+                    <h3 class="text-xl font-extrabold mb-3 text-white">Snack (Pre-entreno)</h3>
+                    <ul class="list-disc list-inside text-white space-y-1 text-sm">
+                        <li>2 tostadas horneadas con frijoles refritos</li>
+                        <li>1 plátano</li>
+                    </ul>
+                </div>
+                <!-- Cena (Post-entreno) -->
+                <div class="bg-gray-800 p-6 rounded-xl border-l-4 border-infit-orange shadow-md">
+                    <h3 class="text-xl font-extrabold mb-3 text-infit-orange">Cena (Post-entreno)</h3>
+                    <ul class="list-disc list-inside text-white space-y-1 text-sm">
+                        <li>150 g pechuga de pavo o pollo</li>
+                        <li>1 taza puré de papa</li>
+                        <li>Ensalada de espinaca con zanahoria rallada</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Weekly Shopping List Section -->
+        <div class="w-full mt-10">
+            <h2 class="text-3xl font-bold text-white mb-4 border-b border-gray-700 pb-2">
+                <span class="text-infit-orange">🛒</span> LISTA DE COMPRAS
+            </h2>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+                <!-- Proteins -->
+                <div class="bg-gray-800 p-4 rounded-xl border border-gray-700">
+                    <h3 class="font-bold mb-1 text-infit-orange">Proteínas</h3>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li>Pollo/Pavo</li>
+                        <li>Pescado blanco</li>
+                        <li>Carne magra</li>
+                        <li>Huevos y claras</li>
+                        <li>Yogurt griego</li>
+                    </ul>
+                </div>
+                <!-- Carbs -->
+                <div class="bg-gray-800 p-4 rounded-xl border border-gray-700">
+                    <h3 class="font-bold mb-1 text-infit-orange">Carbohidratos</h3>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li>Arroz integral</li>
+                        <li>Avena/Pasta integral</li>
+                        <li>Pan integral</li>
+                        <li>Camote/Papas</li>
+                        <li>Frijoles/Tortillas</li>
+                    </ul>
+                </div>
+                <!-- Healthy Fats -->
+                <div class="bg-gray-800 p-4 rounded-xl border border-gray-700">
+                    <h3 class="font-bold mb-1 text-infit-orange">Grasas</h3>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li>Aguacate</li>
+                        <li>Almendras/Nueces</li>
+                        <li>Crema de cacahuate</li>
+                        <li>Aceite de oliva</li>
+                        <li>Semillas de girasol</li>
+                    </ul>
+                </div>
+                <!-- Veggies & Fruits -->
+                <div class="bg-gray-800 p-4 rounded-xl border border-gray-700">
+                    <h3 class="font-bold mb-1 text-infit-orange">Frutas y Verduras</h3>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li>Naranja/Plátano/Manzana</li>
+                        <li>Espinaca/Lechuga</li>
+                        <li>Jitomate/Cebolla</li>
+                        <li>Pepino/Zanahoria</li>
+                        <li>Champiñones/Pimientos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Recommendations Section -->
+        <div class="w-full mt-10">
+            <h2 class="text-3xl font-bold text-white mb-4 border-b border-gray-700 pb-2">
+                <span class="text-infit-orange">💡</span> RECOMENDACIONES CLAVE
+            </h2>
+            <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+                <ul class="list-disc list-inside text-white space-y-2 text-sm">
+                    <li><strong class="text-infit-orange">Hidratación:</strong> Bebe al menos 2 a 2.5 litros de agua al día.</li>
+                    <li><strong class="text-infit-orange">Metabolismo:</strong> No dejes pasar más de 4 horas sin comer.</li>
+                    <li><strong class="text-infit-orange">Organización:</strong> Prepara tus comidas con anticipación para facilitar el cumplimiento.</li>
+                    <li><strong class="text-infit-orange">Suplemento:</strong> Considera la L-Carnitina como apoyo para la movilización de grasa.</li>
+                    <li><strong class="text-infit-orange">Monitoreo:</strong> Se recomienda revisar tu progreso una vez cada 30 días.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Nota Section -->
+        <div class="w-full mt-10 text-center text-gray-400 text-sm">
+            <p class="mt-4">
+                "Cada día que sigues tu plan es un paso más hacia <strong class="text-infit-orange">Tu mejor versión</strong>. Este es un proceso lento, pero con constancia, los resultados llegarán. 💪"
+            </p>
+        </div>
+    </main>
+
+    <script>
+        const tabA = document.getElementById('tabA');
+        const tabB = document.getElementById('tabB');
+        const contentA = document.getElementById('contentA');
+        const contentB = document.getElementById('contentB');
+
+        // Función para manejar el cambio de pestañas
+        function setActiveTab(activeButton, inactiveButton, activeContent, inactiveContent) {
+            // Actualizar clases de botones
+            activeButton.classList.remove('tab-button-inactive');
+            activeButton.classList.add('tab-button-active');
+            inactiveButton.classList.remove('tab-button-active');
+            inactiveButton.classList.add('tab-button-inactive');
+            
+            // Ocultar y mostrar contenido con transición
+            // Ocultar inactivo
+            inactiveContent.classList.remove('block', 'opacity-100');
+            inactiveContent.classList.add('hidden', 'opacity-0');
+            
+            // Mostrar activo (pequeño retraso para la animación)
+            setTimeout(() => {
+                activeContent.classList.remove('hidden', 'opacity-0');
+                activeContent.classList.add('block', 'opacity-100');
+            }, 50); 
+        }
+
+        // Event Listeners
+        tabA.addEventListener('click', () => {
+            setActiveTab(tabA, tabB, contentA, contentB);
+        });
+
+        tabB.addEventListener('click', () => {
+            setActiveTab(tabB, tabA, contentB, contentA);
+        });
+
+        // Asegurar que la Variación 1 esté activa por defecto
+        document.addEventListener('DOMContentLoaded', () => {
+            setActiveTab(tabA, tabB, contentA, contentB);
+        });
+    </script>
+</body>
+</html>
